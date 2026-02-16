@@ -2,21 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="title">My Store</h1>
+  <!-- COVER SECTION -->
+  <section class="hero">
+    <h1>Welcome to My Store</h1>
+    <p>Premium Quality Products</p>
+  </section>
 
-  <!-- PRODUCT LIST -->
-  <div id="product-list" class="product-grid"></div>
+  <!-- PRODUCT SECTION -->
+  <section class="products">
+    <div id="product-list" class="product-grid"></div>
+  </section>
 
-  <!-- PRODUCT DETAILS MODAL -->
+  <!-- PRODUCT MODAL -->
   <div id="product-modal" class="modal hidden">
     <div class="modal-content">
       <span id="close-btn">&times;</span>
-      <img id="modal-image" src="">
+      <img id="modal-image">
       <h2 id="modal-name"></h2>
       <p id="modal-price"></p>
       <p id="modal-description"></p>
