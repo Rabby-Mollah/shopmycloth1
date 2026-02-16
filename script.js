@@ -41,7 +41,7 @@ products.forEach((product) => {
   const card = document.createElement("div");
   card.className = "product-card";
   card.innerHTML = `
-    <img src="${product.image}">
+    <img src="${product.image}" loading="lazy">
     <h3>${product.name}</h3>
     <p>৳${product.price}</p>
   `;
@@ -68,3 +68,4 @@ buyNowBtn.onclick = () => {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
+
