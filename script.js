@@ -63,9 +63,10 @@ closeBtn.onclick = () => {
 };
 
 buyNowBtn.onclick = () => {
-  const phone = "8801XXXXXXXXX"; // your WhatsApp number
+  const phone = "8801972854293"; // your WhatsApp number
   const message = `Hello, I want to buy ${selectedProduct.name} for ৳${selectedProduct.price}`;
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
+
 
