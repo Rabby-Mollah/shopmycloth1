@@ -15,19 +15,33 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background-image: url('cover.png');
+  background-image: url('cover.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   height: 60vh;
+  min-height: 300px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   color: white;
   text-align: center;
   padding: 20px;
 }
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .hero {
+    background-size: contain;
+    background-color: black;
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
 
 
 .hero h1 {
@@ -140,6 +154,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
 
 
