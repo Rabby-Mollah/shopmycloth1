@@ -1,51 +1,27 @@
 const products = [
   {
     name: "Product 1",
-    price: 15,
-    description: "High quality product 1.",
-    image: "https://picsum.photos/300?1"
+    price: 1500,
+    description: "Premium quality product.",
+    image: "images/product1.jpg"
   },
   {
     name: "Product 2",
-    price: 25,
-    description: "High quality product 2.",
-    image: "https://picsum.photos/300?2"
+    price: 2000,
+    description: "Best seller item.",
+    image: "images/product2.jpg"
   },
   {
     name: "Product 3",
-    price: 30,
-    description: "High quality product 3.",
-    image: "https://picsum.photos/300?3"
+    price: 1800,
+    description: "Limited stock available.",
+    image: "images/product3.jpg"
   },
   {
     name: "Product 4",
-    price: 18,
-    description: "High quality product 4.",
-    image: "https://picsum.photos/300?4"
-  },
-  {
-    name: "Product 5",
-    price: 40,
-    description: "High quality product 5.",
-    image: "https://picsum.photos/300?5"
-  },
-  {
-    name: "Product 6",
-    price: 22,
-    description: "High quality product 6.",
-    image: "https://picsum.photos/300?6"
-  },
-  {
-    name: "Product 7",
-    price: 35,
-    description: "High quality product 7.",
-    image: "https://picsum.photos/300?7"
-  },
-  {
-    name: "Product 8",
-    price: 50,
-    description: "High quality product 8.",
-    image: "https://picsum.photos/300?8"
+    price: 2200,
+    description: "Top rated product.",
+    image: "images/product4.jpg"
   }
 ];
 
@@ -61,13 +37,13 @@ const buyNowBtn = document.getElementById("buy-now");
 
 let selectedProduct = null;
 
-products.forEach((product, index) => {
+products.forEach((product) => {
   const card = document.createElement("div");
   card.className = "product-card";
   card.innerHTML = `
     <img src="${product.image}">
     <h3>${product.name}</h3>
-    <p>$${product.price}</p>
+    <p>৳${product.price}</p>
   `;
   card.onclick = () => openModal(product);
   productList.appendChild(card);
@@ -77,7 +53,7 @@ function openModal(product) {
   selectedProduct = product;
   modalImage.src = product.image;
   modalName.innerText = product.name;
-  modalPrice.innerText = "$" + product.price;
+  modalPrice.innerText = "৳" + product.price;
   modalDescription.innerText = product.description;
   modal.classList.remove("hidden");
 }
@@ -87,8 +63,8 @@ closeBtn.onclick = () => {
 };
 
 buyNowBtn.onclick = () => {
-  const phone = "01972854293"; 
-  const message = `Hello, I want to buy ${selectedProduct.name} for $${selectedProduct.price}`;
+  const phone = "8801XXXXXXXXX"; // your WhatsApp number
+  const message = `Hello, I want to buy ${selectedProduct.name} for ৳${selectedProduct.price}`;
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
