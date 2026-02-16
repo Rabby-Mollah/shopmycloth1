@@ -15,7 +15,7 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background-image: url('cover.jpg');
+  background-image: url('cover.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,6 +154,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
 
 
