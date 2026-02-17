@@ -6,6 +6,7 @@ const products = [
     image: "images/product1.jpg"
   },
   {
+    
     name: "Product 2",
     price: 2000,
     description: "Best seller item.",
@@ -68,5 +69,6 @@ buyNowBtn.onclick = () => {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
+
 
 
